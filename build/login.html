@@ -73,7 +73,7 @@
                                     </div>
                                     <div>
                                         <label for="password"
-                                            class="block text-sm font-medium text-gray-300">Password</label>
+                                            class="block text-sm font-medium text-gray-300" >Password</label>
                                         <input type="password" id="password" name="password" required
                                             class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary text-black">
                                     </div>
@@ -81,6 +81,7 @@
                                         class="font-semibold shadow-lg hover:bg-blue-600 w-60 h-11 bg-blue-400 rounded-full">
                                         Login
                                     </button>
+                                    <div id="errormessage" class="text-red-900"></div>
                                 </form>
                                 <p class="mt-4 text-center text-sm text-gray-600">
                                     Don't have an account? <a href="signup.html"
@@ -145,7 +146,8 @@
         if (email === 'admin@admin.com' && password === 'Admin') {
             window.location.href = 'index.html';
         } else {
-            alert('Invalid credentials. Please try again.');
+            const errormessage = document.querySelector('#errormessage');
+            errormessage.innerHTML = ('email and password combination is wrong!. Please try again.');
         }
     });
 </script>

@@ -1,0 +1,19 @@
+{
+  "name": "proj-alt",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./build/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.8"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "prettier": "^3.3.3"
+  },
+  "description": ""
+}

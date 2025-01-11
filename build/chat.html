@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <section class="relative">
+        <div id="Ai-ask" class="fixed md:bottom-44 bottom-10 right-4 md:right-14">
+            <div class="flex flex-row gap-2 items-center content-center bg-stone-700 py-3 px-3 rounded-2xl w-28">
+                <img src="/image/chat-round-dots-svgrepo-com.svg" alt="" class="w-7 h-7">
+                <p class="font-leckerli text-white text-lg font-medium">Chat</p>
+            </div>
+        </div>
+    </section>
+
+
+   
+
+
+
+
+
+
+    <div class="absolute bottom-1/4 right-4">
+        <div id="Ai-message" class="bg-white dark:bg-gray-800 rounded-lg shadow-xl">
+            <div class="p-6 md:p-2">
+                <h2 class="text-2xl md:text-sm font-bold mb-4 md:mb-2">AI Crypto Assistant</h2>
+                <div id="aiChatContainer"
+                    class="mb-4 h-64 md:h-32 overflow-y-auto bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
+                    <!-- Chat messages will be inserted here -->
+                </div>
+                <div class="flex">
+                    <input type="text" id="aiChatInput"
+                        class="flex-grow pl-2 py-2 rounded-l-lg border border-gray-300 dark:border-gray-600  dark:bg-gray-800"
+                        placeholder="Ask about crypto...">
+                    <button id="aiChatSubmit"
+                        class="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2 px-4 ml-[-3.5rem] rounded-r-lg transition-colors duration-200">Ask</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="relative">
+        <div id="Ai-close" class="fixed md:bottom-44 bottom-10 right-4 md:right-14">
+                <img src="/image/close-svgrepo-com.svg" alt="" class="w-7 h-7">
+        </div>
+    </section>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    const aichat = document.getElementById('Ai-ask')
+    const aimessage = document.getElementById('Ai-message')
+    const aiclose = document.getElementById('Ai-close')
+
+    aichat.style.display = 'block'
+    aimessage.style.display = 'none'
+    aiclose.style.display = 'none'
+
+    aichat.addEventListener('click', () => {
+        aimessage.style.display = aimessage.style.display === 'none' ? 'block' : 'none'
+        aiclose.style.display = 'block'
+        aichat.style.display = 'none'
+    });
+
+    aiclose.addEventListener('click', () => {
+        aichat.style.display = 'block'
+        aimessage.style.display = 'none'
+        aiclose.style.display = 'none'
+    });
+
+</script>
+

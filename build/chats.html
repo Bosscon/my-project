@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <dialog id="myDialog" style="border: 1px red; border-radius: 20px; background-color: darkcyan;">
+        <div id="chatPopup" class="bg-gray-900 dark:bg-white rounded-lg shadow-lg p-4">
+            <h3 style="color: aliceblue;">AI Chat Assistant</h3>
+            <div id="chatMessages" class="h-60 overflow-y-auto mb-4 p-2 border rounded"></div>
+            <div class="flex">
+                <input type="text" id="userInput" placeholder="Type your message..."
+                    class="flex-1 px-3 py-2 border rounded-l-md">
+                <button id="sendMessage" class="bg-slate-400 dark:bg-slate-400 text-white px-4 py-2 rounded-r-md">Send</button>
+            </div>
+            <button id="closeDialog" class="bg-slate-500 px-4 py-2 rounded-lg mt-2">Close</button>
+        </div>
+        
+    </dialog>
+    <button id="openDialog">Open</button>
+
+    <script>
+
+const opnBtn = document.querySelector('#openDialog')
+    const clsBtn = document.querySelector('#closeDialog')
+    const myDia = document.querySelector('#myDialog')
+    
+opnBtn.addEventListener('click', () => {
+    myDia.showModal();
+    
+});
+
+clsBtn.addEventListener('click', () => {
+    myDia.close();
+});
+
+    </script>
+
+
+
+    
+</body>
+</html>
+
+
+<script>
+    // const chatButton = document.getElementById('chatButton');
+    //     const chatPopup = document.getElementById('chatPopup');
+    //     const chatMessages = document.getElementById('chatMessages');
+    //     const userInput = document.getElementById('userInput');
+    //     const sendMessage = document.getElementById('sendMessage');
+
+    //     chatButton.addEventListener('click', () => {
+    //         chatPopup.classList.toggle('hidden');
+    //     });
+
+    //     sendMessage.addEventListener('click', () => {
+    //         const message = userInput.value.trim();
+    //         if (message) {
+    //             addMessage('You', message);
+    //             // Simulate AI response
+    //             setTimeout(() => {
+    //                 addMessage('AI', 'Thank you for your message. How can I assist you with cryptocurrency today?');
+    //             }, 1000);
+    //             userInput.value = '';
+    //         }
+    //     });
+
+    //     function addMessage(sender, message) {
+    //         const messageElement = document.createElement('div');
+    //         messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    //         chatMessages.appendChild(messageElement);
+    //         chatMessages.scrollTop = chatMessages.scrollHeight;
+    //     };
+
+
+
+    
+
+  
+</script>
